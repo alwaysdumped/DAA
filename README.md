@@ -349,3 +349,16 @@ The Chiba–Nishizeki algorithm is very efficient for small or sparse graphs but
 The Bron–Kerbosch version is generally more balanced and works well across different graph types.
 
 Both programs are single-threaded.
+
+
+
+
+
+Contributions to this assignment
+
+Abhinav Ganta and S. Chetan Surya Reddy worked on Tomita Research paper
+
+Ruthik Reddy Chitti worked on Chiba research paper
+
+Rohan Varma Penumetcha and Sree Kaushik R on ELS research paper.
+
