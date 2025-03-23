@@ -92,7 +92,9 @@ Size 6: 345 cliques
 -----------------------------
 
 References
+
 Bron-Kerbosch Algorithm
+
 Tomita et al. Pivoting Strategy
 
 
