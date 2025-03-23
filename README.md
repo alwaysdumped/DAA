@@ -29,6 +29,7 @@ The program reads graph data from a text file (e.g., as-skitter.txt). The format
 3 4
 ...
 Each line represents an edge between two vertices.
+The input text file should be placed in the same directory as the code and the path should be updated in the code.
 
 Output
 Results are saved in cliques_skitter.txt, containing:
