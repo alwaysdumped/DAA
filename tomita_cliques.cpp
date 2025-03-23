@@ -83,8 +83,8 @@ Graph parseGraph(const string &filename) {
 }
 
 int main() {
-    vector<string> datasets = {"as-skitter.txt"};
-    ofstream outFile("cliques_skitter.txt");
+    vector<string> datasets = {"Wiki-Vote.txt"};
+    ofstream outFile("cliques_output.txt");
     if (!outFile) {
         cerr << "Error opening output file!" << endl;
         return 1;
@@ -117,6 +117,6 @@ int main() {
     }
     
     outFile.close();
-    cout << "Report saved to cliques_skitter.txt" << endl;
+    cout << "Report saved to cliques_output.txt" << endl;
     return 0;
 }
