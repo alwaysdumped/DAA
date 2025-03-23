@@ -218,3 +218,134 @@ Self-loops are ignored.
 Duplicate edges are implicitly handled using unordered_set.
 
 
+
+--------------------------------------------------
+
+Maximal Clique Listing Algorithms
+
+This project contains two well-known algorithms for finding *maximal cliques* in undirected graphs:
+
+1. “Bron–Kerbosch Algorithm” (with degeneracy ordering)
+2. “Chiba–Nishizeki Clique Listing Algorithm” (based on arboricity)
+
+Both implementations are in C++ and take a graph as input in a simple edge list format.
+
+ 
+ Files Included
+
+- “bron_kerbosch.cpp” — Bron–Kerbosch algorithm with degeneracy optimization.
+- “chiba.cpp” — Chiba–Nishizeki clique listing algorithm using arboricity.
+- “README.md” — This documentation file.
+
+How to Compile
+
+Make sure you have a C++ compiler like “g++”. Then run:
+
+
+g++ -std=c++11 -O2 -o bron bron_kerbosch.cpp
+
+g++ -std=c++11 -O2 -o chiba chiba.cpp
+
+How to Run
+
+Both programs take a graph file as input:
+
+./bron <graph_file>
+
+./chiba <graph_file>
+
+The graph file should be a simple text file with one edge per line:
+
+1 2
+
+2 3
+
+
+3 1
+
+4 5
+
+
+Lines starting with # or blank lines are ignored.
+
+Bron–Kerbosch Overview
+
+Works well on sparse graphs.
+
+Uses degeneracy ordering to reduce branching.
+
+Efficient and easy to understand.
+
+Outputs:
+
+Number of vertices and edges
+
+Largest clique size
+
+Total number of maximal cliques
+
+Clique size distribution
+
+Execution time
+
+Chiba–Nishizeki Overview
+
+Based on arboricity of the graph.
+
+Optimized for graphs with low arboricity, like planar or road network graphs.
+
+Uses smart vertex ordering, auxiliary arrays, and pruning to improve performance.
+
+Outputs each maximal clique directly.
+
+May slow down on large graphs or dense networks.
+
+Input Format (for both)
+
+Each line contains two integers: u v meaning an undirected edge between u and v.
+
+Vertex numbers can be any integers (they’ll be remapped internally).
+
+No duplicate or self-loop edges are needed; the code handles those.
+
+Output Examples
+
+Bron–Kerbosch Output
+
+Graph loaded with 100 vertices
+
+Bron Kerbosch Algorithm gives:
+
+Number of vertices: 100
+
+Number of edges: 250
+
+Largest clique size: 5
+
+Total maximal cliques: 57
+
+Execution time: 0.00312 secs
+
+Clique Size distribution:
+
+Size 3: 30 cliques
+
+Size 4: 20 cliques
+
+Size 5: 7 cliques
+
+Chiba–Nishizeki Output
+
+Clique: { 1 2 3 }
+
+Clique: { 4 5 }
+
+Clique: { 6 7 8 9 }
+
+Notes
+
+The Chiba–Nishizeki algorithm is very efficient for small or sparse graphs but may be slower on large datasets.
+
+The Bron–Kerbosch version is generally more balanced and works well across different graph types.
+
+Both programs are single-threaded.
