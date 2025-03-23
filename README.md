@@ -120,13 +120,8 @@ Compilation
 
 Use “g++" to compile the program:
 
-bash
 
 g++ -std=c++11 -o ELS ELS.cpp
-
-bash
-
-CopyEdit
 
 .\ELS.exe <datasetFile> 
 
@@ -137,17 +132,11 @@ Input Format
 
 The file should contain edges, one per line, in the format:
 
-nginx
-
-CopyEdit
-
 u v
 
 Lines starting with # or empty lines are ignored.
 
 Example:
-
-CopyEdit
 
 1 2
 
