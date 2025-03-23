@@ -1,4 +1,5 @@
 # DAA
+
 Tomita Clique Finder
 
 This project implements the Tomita Algorithm for finding maximal cliques in an undirected graph. The implementation reads a graph from a dataset file, processes it using the Bron-Kerbosch variant with pivot selection, and outputs the discovered cliques along with statistical analysis.
@@ -98,7 +99,7 @@ Tomita et al. Pivoting Strategy
 
 
 
-DAA
+------------------------------------------------
 
 Bron–Kerbosch Maximal Clique Finder
 
